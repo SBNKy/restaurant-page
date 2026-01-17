@@ -1,1 +1,1 @@
-## Restaurant webpage
+## Restaurant page

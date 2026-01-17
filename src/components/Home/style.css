@@ -1,0 +1,29 @@
+h1, h2, p {
+    color: #362823;
+}
+
+.container {
+    /* background-color: red; */
+    max-width: 1100px;
+    border: 1px solid #362823;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: columns;
+    justify-content: center;
+    padding: 12px 0;
+    margin: 0 auto;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-text {
+    font-weight: 600;   
+}
+
+.welcome-description {
+    font-size: 1.2rem;
+}

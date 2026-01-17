@@ -47,6 +47,6 @@ nav {
 }
 
 main {
-    height: 1000px;
+    flex: 1;
     background-color: var(--main-bg-color);
 }

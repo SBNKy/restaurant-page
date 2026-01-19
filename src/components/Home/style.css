@@ -14,14 +14,14 @@ h1, h2, p {
     margin: 0 auto;
 }
 
-.container > div:not(:last-child)::after {
-    content: "";
-    display: block;
-    width: 250px;
-    height: 2px;
-    background-color: #D4A373;
-    margin: 40px auto;  /* 80px odstępu góra/dół, auto = środek poziomo */
-    opacity: 0.6;
+.container h2 {
+    font-family: "Playfair Display";
+    font-size: 2.6rem;
+}
+
+.container p {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
 }
 
 .welcome-container {
@@ -41,6 +41,14 @@ h1, h2, p {
     color: #79685a;
 }
 
+.separator-line {
+    width: 250px;
+    height: 2px;
+    background-color: #D4A373;
+    margin: 40px auto;
+    opacity: 0.6;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -49,25 +57,15 @@ h1, h2, p {
     padding: 8px;
 }
 
-.food-image {
+.image {
     border-radius: 12px;
     box-shadow: 15px 15px 0px rgba(78, 52, 46, 0.1);
 }
 
-.food-description {
+.description {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 36px;
     padding: 0 16px;
-}
-
-.food-description h2 {
-    font-family: "Playfair Display";
-    font-size: 2.4rem;
-}
-
-.food-description p {
-    font-size: 1.3rem;
-    letter-spacing: 1px;
 }

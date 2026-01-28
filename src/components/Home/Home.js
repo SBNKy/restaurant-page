@@ -7,7 +7,7 @@ import dessertPhoto from "../../assets/images/dessert-photo.webp";
 
 export default function createHomepage() {
     const container = document.createElement("div");
-    container.classList.add("container");
+    container.classList.add("home-container");
 
     const welcomeTitle = "Welcome to {your restaurant name}";
     const welcomeText = "A place where your expectations meet reality";

@@ -12,10 +12,15 @@ function loadComponent(component) {
     contentContainer.appendChild(component);
 }
 
-homeBtn.addEventListener("click", (e) => {
+homeBtn.addEventListener("click", () => {
     loadComponent(createHome());
 });
 
+menuBtn.addEventListener("click", () => {
+    loadComponent(createMenu());
+})
+
 
 const homeComponent = createHome();
-loadComponent(homeComponent)
+// loadComponent(homeComponent)
+loadComponent(createMenu());

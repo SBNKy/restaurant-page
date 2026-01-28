@@ -12,6 +12,7 @@
     box-sizing: border-box;
     --header-bg-color: #FBF8F3;
     --main-bg-color: #f7f1e7;
+    --h-tag-color: #362823;
 }
 
 button, h1, h2, h3, h4 {
@@ -49,5 +50,5 @@ nav {
 main {
     background-color: var(--main-bg-color);
     flex: 1;
-    padding: 8px 0;
+    padding: 16px 0;
 }

@@ -1,0 +1,27 @@
+.menu-container {
+    max-width: 1200px;
+    background-color: #FFFEFA;
+    border: 1px solid rgba(60, 40, 30, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px -10px rgba(60, 40, 30, 0.1);
+    padding: 16px;
+    margin: 0 auto;
+}
+
+.menu-container h2 {
+    color: var(--h-tag-color);
+    font-family: "Playfair Display";
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 2.6rem;
+}
+
+.menu-separator {
+    width: 400px;
+    height: 2px;
+    background-color: #D4A373;
+    margin: 20px auto;
+    opacity: 0.6;
+}

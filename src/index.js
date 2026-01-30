@@ -25,6 +25,4 @@ contactBtn.addEventListener("click", () => {
     loadComponent(createContact());
 })
 
-// loadComponent(homeComponent())
-// loadComponent(createMenu());
-loadComponent(createContact());
+loadComponent(homeComponent())

@@ -5,8 +5,8 @@ export default function createContactPage() {
     containerDiv.classList.add("contact-container");
 
     const contactText = document.createElement("h2");
-    contactText.classList.add("contact-text")
-    contactText.textContent = "Contact Us"
+    contactText.classList.add("contact-text");
+    contactText.textContent = "Contact Us";
 
     const form = document.createElement("form");
 
@@ -23,7 +23,6 @@ export default function createContactPage() {
     form.appendChild(formTextarea);
     form.appendChild(submitBtn);
 
-
     containerDiv.appendChild(contactText);
     containerDiv.appendChild(form);
     return containerDiv;
@@ -33,20 +32,20 @@ function createPersonalDataFieldset() {
     const personalDataFieldset = document.createElement("fieldset");
 
     const fieldsConfig = [
-        {name: "name", label: "Name:", type: "text"},
-        {name: "surname", label: "Surname:", type: "text"},
-        {name: "email", label: "Email:", type: "email"},
-        {name: "phone-number:", label: "Phone number:", type: "tel"}
+        { name: "name", label: "Name:", type: "text" },
+        { name: "surname", label: "Surname:", type: "text" },
+        { name: "email", label: "Email:", type: "email" },
+        { name: "phone-number:", label: "Phone number:", type: "tel" },
     ];
 
-    fieldsConfig.forEach(config => {
+    fieldsConfig.forEach((config) => {
         const label = createLabel(config.label);
         const input = createInput(config.name, config.type);
 
         label.appendChild(input);
-        
+
         personalDataFieldset.appendChild(label);
-    })
+    });
 
     return personalDataFieldset;
 }

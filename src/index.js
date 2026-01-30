@@ -21,6 +21,9 @@ menuBtn.addEventListener("click", () => {
     loadComponent(createMenu());
 })
 
+contactBtn.addEventListener("click", () => {
+    loadComponent(createContact());
+})
 
 // loadComponent(homeComponent())
 // loadComponent(createMenu());

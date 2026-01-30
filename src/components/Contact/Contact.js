@@ -4,15 +4,27 @@ export default function createContactPage() {
     const containerDiv = document.createElement("div");
     containerDiv.classList.add("contact-container");
 
+    const contactText = document.createElement("h2");
+    contactText.classList.add("contact-text")
+    contactText.textContent = "Contact Us"
+
     const form = document.createElement("form");
 
     const personalDataFieldset = createPersonalDataFieldset();
-
     const formTextarea = document.createElement("textarea");
+    formTextarea.cols = "70";
+    formTextarea.rows = "10";
+
+    const submitBtn = document.createElement("button");
+    submitBtn.type = "submit";
+    submitBtn.textContent = "Send";
 
     form.appendChild(personalDataFieldset);
     form.appendChild(formTextarea);
+    form.appendChild(submitBtn);
 
+
+    containerDiv.appendChild(contactText);
     containerDiv.appendChild(form);
     return containerDiv;
 }
@@ -22,19 +34,20 @@ function createPersonalDataFieldset() {
 
     const fieldsConfig = [
         {name: "name", label: "Name:", type: "text"},
-        {name: "surname", label: "Surname", type: "text"},
+        {name: "surname", label: "Surname:", type: "text"},
         {name: "email", label: "Email:", type: "email"},
         {name: "phone-number:", label: "Phone number:", type: "tel"}
     ];
 
-    const nameLabelText = "Name:";
-    const nameLabel = createLabel(nameLabelText);
-    const nameInput = createInput("name", "text");
-    nameLabel.appendChild(nameInput);
+    fieldsConfig.forEach(config => {
+        const label = createLabel(config.label);
+        const input = createInput(config.name, config.type);
 
-    const surnameLabelText = "Surname:";
+        label.appendChild(input);
+        
+        personalDataFieldset.appendChild(label);
+    })
 
-    personalDataFieldset.appendChild(nameLabel);
     return personalDataFieldset;
 }
 

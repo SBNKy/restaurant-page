@@ -9,7 +9,7 @@ export default function createContactPage() {
     const personalDataFieldset = createPersonalDataFieldset();
 
     const formTextarea = document.createElement("textarea");
-    
+
     form.appendChild(personalDataFieldset);
     form.appendChild(formTextarea);
 
@@ -20,9 +20,16 @@ export default function createContactPage() {
 function createPersonalDataFieldset() {
     const personalDataFieldset = document.createElement("fieldset");
 
+    const fieldsConfig = [
+        {name: "name", label: "Name:", type: "text"},
+        {name: "surname", label: "Surname", type: "text"},
+        {name: "email", label: "Email:", type: "email"},
+        {name: "phone-number:", label: "Phone number:", type: "tel"}
+    ];
+
     const nameLabelText = "Name:";
-    const nameLabel = createLabel(nameLabelText)
-    const nameInput = createInput("name");
+    const nameLabel = createLabel(nameLabelText);
+    const nameInput = createInput("name", "text");
     nameLabel.appendChild(nameInput);
 
     const surnameLabelText = "Surname:";
@@ -35,12 +42,12 @@ function createLabel(text) {
     const label = document.createElement("label");
     const span = document.createElement("span");
     span.textContent = text;
-    
+
     label.appendChild(span);
     return label;
 }
 
-function createInput(name, type="input", value="") {
+function createInput(name, type, value = "") {
     const input = document.createElement("input");
     input.type = type;
     input.name = name;

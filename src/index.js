@@ -25,4 +25,4 @@ contactBtn.addEventListener("click", () => {
     loadComponent(createContact());
 })
 
-loadComponent(homeComponent());
+loadComponent(createHome());

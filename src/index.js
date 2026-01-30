@@ -1,6 +1,7 @@
 import "./style.css";
-import createHome from "./components/Home/Home";
-import createMenu from "./components/Menu/Menu";
+import createHome from "./components/Home/Home.js";
+import createMenu from "./components/Menu/Menu.js";
+import createContact from "./components/Contact/Contact.js";
 
 const contentContainer = document.querySelector("main");
 const homeBtn = document.querySelector("#home-button");
@@ -21,6 +22,6 @@ menuBtn.addEventListener("click", () => {
 })
 
 
-const homeComponent = createHome();
-// loadComponent(homeComponent)
-loadComponent(createMenu());
+// loadComponent(homeComponent())
+// loadComponent(createMenu());
+loadComponent(createContact());

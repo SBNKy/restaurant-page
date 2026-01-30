@@ -9,8 +9,6 @@ export default function createMenuPage() {
     menuTitle.classList.add("menu-title");
     menuTitle.textContent = "Menu";
 
-    
-
     const menuColumns = createMenu();
 
     container.appendChild(menuTitle);
@@ -66,7 +64,7 @@ function createMenu() {
 
             categoryDiv.appendChild(itemDiv);
         })
-
+        
         menuColumns.appendChild(categoryDiv);
     })
 
